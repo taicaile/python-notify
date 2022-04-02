@@ -27,6 +27,5 @@ setup(
     author="taicaile",
     url="https://github.com/taicaile/python-notify",
     packages=find_packages(),
-    package_dir={"": "src"},
     install_requires=read_requirements("requirements.txt"),
 )
