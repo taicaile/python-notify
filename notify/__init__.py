@@ -1,14 +1,20 @@
 """apprise notification"""
 
 import os
+from dataclasses import dataclass
 
 import apprise
 from dotenv import load_dotenv
 
-# ENVPATH = os.path.join(os.path.dirname(__file__), ".env")
 ENVPATH = os.path.join(os.path.abspath(os.curdir), ".env")
 if os.path.isfile(ENVPATH):
     load_dotenv(ENVPATH)
+
+
+@dataclass
+class NotifyData:
+    title: str
+    body: str
 
 
 def apprise_init():
